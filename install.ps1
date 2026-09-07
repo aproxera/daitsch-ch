@@ -30,6 +30,24 @@ Get-ChildItem -Path $QuellSkill -Directory | ForEach-Object {
 }
 Write-Host "Installiert nach $Ziel"
 
+# Wo Skills unter ~\.agents liegen und ~\.claude\skills darauf verweist, den
+# Verweis nachziehen. Junction statt SymbolicLink: die geht unter Windows ohne
+# erhoehte Rechte, ein echter Symlink verlangt Administrator oder den
+# Entwicklermodus.
+$AgentsZiel = Join-Path $env:USERPROFILE ".agents\skills\$Name"
+$ClaudeDir  = Join-Path $env:USERPROFILE ".claude\skills"
+$ClaudeZiel = Join-Path $ClaudeDir $Name
+
+if (($Ziel -eq $AgentsZiel) -and (Test-Path $ClaudeDir) -and -not (Test-Path $ClaudeZiel)) {
+    try {
+        New-Item -ItemType Junction -Path $ClaudeZiel -Target $Ziel -ErrorAction Stop | Out-Null
+        Write-Host "Verweis angelegt: $ClaudeZiel"
+    } catch {
+        Write-Host "Verweis nach $ClaudeZiel nicht moeglich: $($_.Exception.Message)"
+        Write-Host "Von Hand: New-Item -ItemType Junction -Path `"$ClaudeZiel`" -Target `"$Ziel`""
+    }
+}
+
 $python = Get-Command python -ErrorAction SilentlyContinue
 if ($null -eq $python) { $python = Get-Command python3 -ErrorAction SilentlyContinue }
 if ($null -ne $python) {
