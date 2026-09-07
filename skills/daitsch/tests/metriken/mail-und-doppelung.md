@@ -4,6 +4,6 @@ Sollte sich die Datenlieferung weiter verzögern, schicke ich vorab eine vorläu
 
 Die Prüfung der Leerstandsflächen ist abgeschlossen und liegt der Buchhaltung seit Montag zur Freigabe vor, weitere Schritte folgen danach.
 
-Viele Grüße
+Viele Grüsse
 
 Die Prüfung der Leerstandsflächen ist abgeschlossen und liegt der Buchhaltung seit Dienstag zur Freigabe vor, weitere Schritte folgen danach.

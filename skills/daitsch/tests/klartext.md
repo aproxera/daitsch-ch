@@ -8,8 +8,8 @@ Der Lauf dauert jetzt 22 Minuten statt der geplanten zehn.
 
 Der Engpass sitzt in der Umlageberechnung. Sie setzt je Fläche eine eigene Abfrage ab: 38.000 Abfragen im Lauf, davon 31.000 mit identischem Ergebnis. Ein Zwischenspeicher drückt den Lauf nach unserer Messung auf gut sechs Minuten. Der Umbau kostet etwa drei Tage, und er berührt die Umlagelogik, die im Sommer ohnehin auf die neue Fassung umgestellt wird. Wer beides zusammenlegt, spart einen zweiten Test der Abrechnung.
 
-Zwei Punkte brauchen eine Entscheidung aus dem Fachbereich. Ob die drei Tage in den Zwischenspeicher fließen oder ob 22 Minuten je Nacht hinnehmbar sind, kann ich nicht beurteilen. Wie die Leerstandsflächen dauerhaft behandelt werden, ebenfalls nicht.
+Zwei Punkte brauchen eine Entscheidung aus dem Fachbereich. Ob die drei Tage in den Zwischenspeicher fliessen oder ob 22 Minuten je Nacht hinnehmbar sind, kann ich nicht beurteilen. Wie die Leerstandsflächen dauerhaft behandelt werden, ebenfalls nicht.
 
-Die Optimierung der Abfragen wirkt am stärksten bei den großen Objekten. Abbildung 2 im Anhang zeigt die Laufzeiten je Fläche. Die Begleitung durch die Fachabteilung ist bis Ende Oktober zugesagt, die Förderung für das Vorhaben läuft bis März.
+Die Optimierung der Abfragen wirkt am stärksten bei den grossen Objekten. Abbildung 2 im Anhang zeigt die Laufzeiten je Fläche. Die Begleitung durch die Fachabteilung ist bis Ende Oktober zugesagt, die Förderung für das Vorhaben läuft bis März.
 
 Bis dahin läuft der Import unverändert weiter. Ich melde mich, wenn er zweimal hintereinander abbricht.

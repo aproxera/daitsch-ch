@@ -12,7 +12,7 @@ Der vollständige Katalog steht in [`references/katalog.md`](references/katalog.
 <!-- KERN:start -->
 ## Kernregeln
 
-Diese Griffe decken den größten Teil ab. Alles Weitere steht im Katalog.
+Diese Griffe decken den grössten Teil ab. Alles Weitere steht im Katalog.
 
 | Statt der Floskel | Klartext |
 |---|---|
@@ -80,10 +80,10 @@ Agenten ohne Skriptausführung arbeiten den Katalog selbst ab: erst die Kernrege
 
 ## Grenzen
 
-Der Katalog beschreibt Auffälligkeiten, keine Fehler. Fast jedes Muster ist irgendwo richtig: der Halbgeviertstrich in guter Prosa, „Fazit“ im Gutachten, „es bleibt abzuwarten“ im juristischen Text, der Doppelpunkt-Titel in der Presse, das Ökosystem in der Biologie. Das Feld Zulässig im Katalogeintrag entscheidet, nicht der Fund.
+Der Katalog beschreibt Auffälligkeiten, keine Fehler. Fast jedes Muster ist irgendwo richtig: der Halbgeviertstrich in guter Prosa, «Fazit» im Gutachten, «es bleibt abzuwarten» im juristischen Text, der Doppelpunkt-Titel in der Presse, das Ökosystem in der Biologie. Das Feld Zulässig im Katalogeintrag entscheidet, nicht der Fund.
 
 Überkorrektur macht Texte schlechter als die Floskeln, die sie beseitigt. Im Zweifel bleibt der Satz stehen und der Befund wird gemeldet.
 
 ## Herkunft
 
-Die Musterlisten beruhen auf „KI-Sprachmuster im Deutschen vermeiden“ von Tobias Voßberg, [www.iplaw.lol/ki-floskeln](https://www.iplaw.lol/ki-floskeln/), verwendet mit seiner Zustimmung. Seine Sammlung geht auf [tropes.fyi](https://tropes.fyi/) von Ossama zurück.
+Die Musterlisten beruhen auf «KI-Sprachmuster im Deutschen vermeiden» von Tobias Vossberg, [www.iplaw.lol/ki-floskeln](https://www.iplaw.lol/ki-floskeln/), verwendet mit seiner Zustimmung. Seine Sammlung geht auf [tropes.fyi](https://tropes.fyi/) von Ossama zurück.

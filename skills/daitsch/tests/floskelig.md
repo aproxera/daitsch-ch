@@ -50,7 +50,7 @@ Input → Verarbeitung → Output
 - **Leistung:** verzögertes Laden aufwendiger Ressourcen
 - **Transparenz:** klare und nachvollziehbare Prozesse
 
-Der Zugriff ist **streng limitiert** und die Freigabe erfolgt **ausschließlich** durch die Fachabteilung. Die Prüfung ist **verpflichtend** und wird **jährlich** wiederholt.
+Der Zugriff ist **streng limitiert** und die Freigabe erfolgt **ausschliesslich** durch die Fachabteilung. Die Prüfung ist **verpflichtend** und wird **jährlich** wiederholt.
 
 Die Umstellung ist **verbindlich** und betrifft **alle** Abteilungen ab dem ersten Quartal.
 

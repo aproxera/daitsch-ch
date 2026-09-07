@@ -14,9 +14,9 @@ Die Überschrift ist die Muster-ID, die der Prüfer meldet. Darunter:
 - `**Floskel:**` und `**Klartext:**`: dasselbe zweimal, einmal als Muster, einmal brauchbar
 - `**Zulässig:**`: wann das Muster stehen bleibt
 
-In der Wortliste steht eine Wendung je Zeile, Groß- und Kleinschreibung wird ignoriert. `*` am Wortende deckt die Beugung ab: `innovativ*` findet auch `innovative` und `innovativen`.
+In der Wortliste steht eine Wendung je Zeile, Gross- und Kleinschreibung wird ignoriert. `*` am Wortende deckt die Beugung ab: `innovativ*` findet auch `innovative` und `innovativen`.
 
-Ein `regex`-Block wird zeilenweise verankert (`^` und `$` gelten je Zeile) und achtet auf Groß- und Kleinschreibung. Wo sie egal ist, steht `(?i)` am Anfang des Ausdrucks.
+Ein `regex`-Block wird zeilenweise verankert (`^` und `$` gelten je Zeile) und achtet auf Gross- und Kleinschreibung. Wo sie egal ist, steht `(?i)` am Anfang des Ausdrucks.
 
 ---
 
@@ -24,7 +24,7 @@ Ein `regex`-Block wird zeilenweise verankert (`^` und `$` gelten je Zeile) und a
 
 ### negativ-parallelismus
 
-**Erkennung:** Eine Aussage wird verneint, damit die folgende wie eine Erkenntnis wirkt. Dazu gehören drei Formen: „nicht X, sondern Y“, die Kurzform „X, nicht Y“ und die Fassung über zwei Sätze, „Die Frage ist nicht X. Die Frage ist Y.“ Der Ausdruck unten findet nur die erste. Die beiden anderen sind von einer Korrektur („Er kam am Montag, nicht am Dienstag“) maschinell nicht zu unterscheiden und müssen beim Lesen auffallen: Verdächtig wird es, wenn beide Seiten abstrakt sind und die verneinte Hälfte nur als Folie für die zweite dient.
+**Erkennung:** Eine Aussage wird verneint, damit die folgende wie eine Erkenntnis wirkt. Dazu gehören drei Formen: «nicht X, sondern Y», die Kurzform «X, nicht Y» und die Fassung über zwei Sätze, «Die Frage ist nicht X. Die Frage ist Y.» Der Ausdruck unten findet nur die erste. Die beiden anderen sind von einer Korrektur («Er kam am Montag, nicht am Dienstag») maschinell nicht zu unterscheiden und müssen beim Lesen auffallen: Verdächtig wird es, wenn beide Seiten abstrakt sind und die verneinte Hälfte nur als Folie für die zweite dient.
 
 **Härte:** hart
 
@@ -52,7 +52,7 @@ Ein `regex`-Block wird zeilenweise verankert (`^` und `$` gelten je Zeile) und a
 
 **Klartext:** Die Lösung spart vier Minuten je Vorgang. Die Fehlerquote fiel von sechs auf zwei Prozent.
 
-**Zulässig:** Wenn der zweite Punkt wirklich überrascht, weil der erste ihn ausschließen würde.
+**Zulässig:** Wenn der zweite Punkt wirklich überrascht, weil der erste ihn ausschliessen würde.
 
 ### verneinungs-dreiklang
 
@@ -87,6 +87,7 @@ zweifellos
 subtil*
 grundlegend*
 maßgeblich*
+massgeblich*
 nachhaltig*
 ```
 
@@ -197,6 +198,7 @@ entscheidend*
 wesentlich*
 essenziell*
 von großer Bedeutung
+von grosser Bedeutung
 von entscheidender Bedeutung
 elementar*
 unerlässlich
@@ -206,7 +208,7 @@ unerlässlich
 
 **Klartext:** Ohne Einsicht in die Rohdaten lässt sich die Quote nicht nachrechnen.
 
-**Zulässig:** Wenn der Satz die Bedeutung anschließend belegt.
+**Zulässig:** Wenn der Satz die Bedeutung anschliessend belegt.
 
 ### business-adjektive
 
@@ -222,6 +224,7 @@ ganzheitlich*
 leistungsstark*
 zukunftssicher*
 maßgeschneidert*
+massgeschneidert*
 hochmodern*
 wegweisend*
 state of the art
@@ -452,7 +455,7 @@ abbilden
 **Härte:** hart
 
 ```regex
-(?i),?\s+(?:und\s+)?(?:unterstreicht\s+(?:damit|so)|verdeutlicht\s+damit|zeigt\s+damit|trägt\s+(?:damit|so)\s+(?:zu|dazu)|spiegelt\s+(?:damit|so)\s+wider|was\s+die\s+(?:zentrale|wachsende|große)\s+\w+)
+(?i),?\s+(?:und\s+)?(?:unterstreicht\s+(?:damit|so)|verdeutlicht\s+damit|zeigt\s+damit|trägt\s+(?:damit|so)\s+(?:zu|dazu)|spiegelt\s+(?:damit|so)\s+wider|was\s+die\s+(?:zentrale|wachsende|gro(?:ß|ss)e)\s+\w+)
 ```
 
 **Floskel:** Die Zahl der Anträge stieg um 30 Prozent und unterstreicht damit die wachsende Bedeutung von Transparenz.
@@ -477,7 +480,7 @@ abbilden
 
 ### kuenstliche-kausalitaet
 
-**Erkennung:** Eine kleine Maßnahme wird mit einer großen Folge verbunden, ohne den Zusammenhang zu belegen.
+**Erkennung:** Eine kleine Massnahme wird mit einer grossen Folge verbunden, ohne den Zusammenhang zu belegen.
 
 **Härte:** weich
 
@@ -550,7 +553,7 @@ abbilden
 **Härte:** hart
 
 ```regex
-(?i)\b(?:Das\s+bedeutet\s+nicht,?\s+dass|Damit\s+ist\s+nicht\s+gesagt|Das\s+heißt\s+(?:keineswegs|nicht,?\s+dass)|Missverstehen\s+Sie\s+mich\s+nicht)\b
+(?i)\b(?:Das\s+bedeutet\s+nicht,?\s+dass|Damit\s+ist\s+nicht\s+gesagt|Das\s+hei(?:ß|ss)t\s+(?:keineswegs|nicht,?\s+dass)|Missverstehen\s+Sie\s+mich\s+nicht)\b
 ```
 
 **Floskel:** Das bedeutet nicht, dass Unternehmen auf KI verzichten müssen.
@@ -579,7 +582,7 @@ abbilden
 
 ### liste-im-trenchcoat
 
-**Erkennung:** Eine nummerierte Liste ist als Fließtext verkleidet.
+**Erkennung:** Eine nummerierte Liste ist als Fliesstext verkleidet.
 
 **Härte:** hart
 
@@ -850,7 +853,7 @@ Der Weg ist das Ziel
 
 ### gerade-anfuehrungszeichen
 
-**Erkennung:** Gerade Anführungszeichen in deutschem Text sind durchgereichte englische Konvention. Deutsch ist „so“ oder »so«.
+**Erkennung:** Gerade Anführungszeichen in deutschem Text sind durchgereichte englische Konvention. Im Schweizer Satz stehen Guillemets, «so».
 
 **Härte:** hart
 
@@ -860,7 +863,7 @@ Der Weg ist das Ziel
 
 **Floskel:** Der Kollege nannte das Vorgehen "alternativlos".
 
-**Klartext:** Der Kollege nannte das Vorgehen „alternativlos“.
+**Klartext:** Der Kollege nannte das Vorgehen «alternativlos».
 
 **Zulässig:** In Code, in Dateipfaden und in englischen Zitaten.
 
@@ -898,7 +901,7 @@ Der Weg ist das Ziel
 
 **Klartext:** Die Daten kommen aus dem Import, werden geprüft und landen in der Tabelle.
 
-**Zulässig:** In Diagrammen, in Code und dort, wo der Pfeil eine Richtung bezeichnet, die im Fließtext umständlich wäre.
+**Zulässig:** In Diagrammen, in Code und dort, wo der Pfeil eine Richtung bezeichnet, die im Fliesstext umständlich wäre.
 
 ### emoji-gliederung
 
@@ -947,7 +950,7 @@ Wer die Vorlage nutzt, spart das Formatieren.
 **Härte:** hart
 
 ```regex
-(?i)^#{0,6}\s*(?:Die\s+)?\d{1,2}\s+(?:wichtigsten\s+|häufigsten\s+|größten\s+|besten\s+)?(?:Gründe|Tipps|Wege|Fehler|Punkte|Schritte|Regeln|Trends|Strategien|Dinge|Merkmale)\b
+(?i)^#{0,6}\s*(?:Die\s+)?\d{1,2}\s+(?:wichtigsten\s+|häufigsten\s+|grö(?:ß|ss)ten\s+|besten\s+)?(?:Gründe|Tipps|Wege|Fehler|Punkte|Schritte|Regeln|Trends|Strategien|Dinge|Merkmale)\b
 ```
 
 ```floskel
@@ -968,7 +971,7 @@ Wer die Vorlage nutzt, spart das Formatieren.
 
 **Metrik:** fettdruck_dichte
 
-**Floskel:** Der Zugriff ist **streng limitiert** und die Freigabe erfolgt **ausschließlich** durch die Fachabteilung.
+**Floskel:** Der Zugriff ist **streng limitiert** und die Freigabe erfolgt **ausschliesslich** durch die Fachabteilung.
 
 **Klartext:** Zugriff haben vier Personen. Die Freigabe erteilt die Fachabteilung.
 
@@ -1066,7 +1069,7 @@ Wer die Vorlage nutzt, spart das Formatieren.
 
 ### gleichbleibende-flughoehe
 
-**Erkennung:** Jeder Absatz bleibt auf demselben Abstraktionsgrad. Kein Einzelfall, keine Ausnahme, kein Absatz deutlich länger als die anderen. Ein menschlicher Text hat Höhenunterschiede: Er beißt sich an einem Begriff fest und geht über anderes hinweg.
+**Erkennung:** Jeder Absatz bleibt auf demselben Abstraktionsgrad. Kein Einzelfall, keine Ausnahme, kein Absatz deutlich länger als die anderen. Ein menschlicher Text hat Höhenunterschiede: Er beisst sich an einem Begriff fest und geht über anderes hinweg.
 
 **Härte:** weich
 
@@ -1088,7 +1091,7 @@ Wer die Vorlage nutzt, spart das Formatieren.
 
 **Floskel:** Beginnen Sie noch heute damit, Ihre Prozesse zu prüfen.
 
-**Klartext:** Wer die Frist am 30. Juni reißt, zahlt das Bußgeld nach Absatz 3.
+**Klartext:** Wer die Frist am 30. Juni reisst, zahlt das Bussgeld nach Absatz 3.
 
 **Zulässig:** In Werbung, die als solche erkennbar ist, und in Anleitungen.
 
@@ -1120,7 +1123,7 @@ Der Mensch bleibt der entscheidende
 **Härte:** hart
 
 ```regex
-(?i)\b(?:Abschließend\s+(?:lässt\s+sich|bleibt|kann)|Zusammenfassend\s+(?:lässt\s+sich|kann)|Insgesamt\s+zeigt\s+sich|Alles\s+in\s+allem)\b
+(?i)\b(?:Abschlie(?:ß|ss)end\s+(?:lässt\s+sich|bleibt|kann)|Zusammenfassend\s+(?:lässt\s+sich|kann)|Insgesamt\s+zeigt\s+sich|Alles\s+in\s+allem)\b
 ```
 
 **Floskel:** Zusammenfassend lässt sich festhalten, dass die Umstellung Vorteile bringt.
@@ -1136,7 +1139,7 @@ Der Mensch bleibt der entscheidende
 **Härte:** hart
 
 ```regex
-(?i)\b(?:Trotz\s+dieser\s+Herausforderungen|Einerseits\b[^.!?]{5,80}\bandererseits|birgt\s+jedoch\s+auch\s+Risiken|Chancen\s+und\s+Risiken\s+gleichermaßen)\b
+(?i)\b(?:Trotz\s+dieser\s+Herausforderungen|Einerseits\b[^.!?]{5,80}\bandererseits|birgt\s+jedoch\s+auch\s+Risiken|Chancen\s+und\s+Risiken\s+gleicherma(?:ß|ss)en)\b
 ```
 
 **Floskel:** Trotz dieser Herausforderungen bietet die Technologie erhebliche Chancen.
@@ -1180,7 +1183,7 @@ Der Mensch bleibt der entscheidende
 **Härte:** hart
 
 ```regex
-(?i)\b(?:Gerne\s+(?:passe|kann)\s+ich|Auf\s+Wunsch\s+(?:kann|erstelle)\s+ich|Ich\s+kann\s+(?:dir|Ihnen)\s+(?:außerdem|gerne|auch)|Sag\s+(?:einfach\s+)?Bescheid,?\s+wenn|Melde\s+dich,?\s+wenn\s+du)\b
+(?i)\b(?:Gerne\s+(?:passe|kann)\s+ich|Auf\s+Wunsch\s+(?:kann|erstelle)\s+ich|Ich\s+kann\s+(?:dir|Ihnen)\s+(?:au(?:ß|ss)erdem|gerne|auch)|Sag\s+(?:einfach\s+)?Bescheid,?\s+wenn|Melde\s+dich,?\s+wenn\s+du)\b
 ```
 
 **Floskel:** Gerne passe ich den Text weiter an.
@@ -1252,7 +1255,7 @@ zunehmend digitalen Welt
 
 ### wichtiger-erster-schritt
 
-**Erkennung:** Eine Maßnahme wird gelobt, ohne ihre Wirkung zu bewerten.
+**Erkennung:** Eine Massnahme wird gelobt, ohne ihre Wirkung zu bewerten.
 
 **Härte:** hart
 
@@ -1312,4 +1315,90 @@ komplex* Rahmenbedingung*
 
 ## Herkunft
 
-Die Musterlisten stammen aus „KI-Sprachmuster im Deutschen vermeiden“ von Tobias Voßberg, [www.iplaw.lol/ki-floskeln](https://www.iplaw.lol/ki-floskeln/). Die Klartext-Fassungen, die Ausnahmen und die Prüfregeln sind hier hinzugekommen.
+Die Musterlisten stammen aus «KI-Sprachmuster im Deutschen vermeiden» von Tobias Vossberg, [www.iplaw.lol/ki-floskeln](https://www.iplaw.lol/ki-floskeln/). Die Klartext-Fassungen, die Ausnahmen und die Prüfregeln sind hier hinzugekommen.
+
+<!-- CH-LAYER -->
+
+## Schweiz
+
+### deutsche-anfuehrungszeichen
+
+**Erkennung:** Die deutschen Anführungszeichen „sind so“ sind im
+bundesdeutschen Satz richtig, im Schweizer Satz nicht. Hier stehen Guillemets,
+«so». Gemischte Formen in einem Text verraten eine übernommene Vorlage.
+
+**Härte:** weich
+
+```regex
+„[^“\n]{2,80}“
+```
+
+**Floskel:** Der Kollege nannte das Vorgehen „alternativlos“.
+
+**Klartext:** Der Kollege nannte das Vorgehen «alternativlos».
+
+**Zulässig:** In wörtlich übernommenen Zitaten aus deutschen Quellen und in
+Texten, die ausdrücklich für ein deutsches Publikum gesetzt werden.
+
+## Belege
+
+### belege-erfunden
+
+**Erkennung:** Quelle, Titel, Autor, Jahr, Link, ISBN oder DOI klingen
+stimmig, existieren aber nicht. Das Modell füllt eine Lücke mit einer
+plausiblen Form statt mit einer Angabe. Maschinell nicht zu finden: jede
+Fundstelle muss nachgeschlagen werden.
+
+**Härte:** hart
+
+**Floskel:** Laut einer Studie der ETH Zürich aus dem Jahr 2023 sinkt der
+Aufwand um vierzig Prozent.
+
+**Klartext:** Wie stark der Aufwand sinkt, ist nicht erhoben. Die Zahl fehlt.
+
+**Zulässig:** Nie. Eine Lücke wird als Lücke benannt, nicht gefüllt.
+
+### beleg-traegt-nicht
+
+**Erkennung:** Die Quelle gibt es, sie sagt aber etwas anderes. Dazu gehören
+eine gültige DOI zu einem anderen Aufsatz, ein Buch zum verwandten statt zum
+genannten Thema, ein Buchbeleg ohne Seitenzahl, ein Link auf eine
+Trefferliste statt auf das Dokument, und ein Eintrag im Quellenverzeichnis,
+an dem keine Aussage hängt.
+
+**Härte:** weich
+
+**Floskel:** Der Bericht des BFS belegt den Rückgang. [Link auf die Suchseite
+des BFS]
+
+**Klartext:** Der Rückgang steht in der Erhebung des BFS von 2024, Tabelle 3.
+
+**Zulässig:** Wenn die Quelle als Hintergrund und nicht als Beleg für eine
+einzelne Aussage gesetzt ist und der Text das kenntlich macht.
+
+## Artefakte
+
+### chatbot-zitierreste
+
+**Erkennung:** Zitier- und Trackingreste aus der Oberfläche eines Chatbots
+sind im Text geblieben.
+
+Der Ausdruck deckt die Reste im Fliesstext ab. Reste im Linkziel findet er
+nicht: der Prüfer maskiert URLs, bevor er sucht, damit Adressen nicht jede
+zweite Prosaregel auslösen. Der häufigste Rest steckt aber genau dort, als
+`utm_source=chatgpt.com`. Vor dem Veröffentlichen deshalb zusätzlich:
+
+    grep -nE "utm_source=(chatgpt|claude|perplexity)" datei.md
+
+**Härte:** hart
+
+```regex
+(?i)(oaicite|:contentReference|turn\d+search|\[cite:\s*\d+\]|\[span_\d+\]|grok_render_citation)
+```
+
+**Floskel:** Die Zahl stammt aus dem Bericht :contentReference[oaicite:3]{index=3}.
+
+**Klartext:** Die Zahl stammt aus dem Jahresbericht 2025, Seite 12.
+
+**Zulässig:** Nie im ausgelieferten Text. In einer Sammlung von Rohmaterial
+darf der Rest stehen bleiben, solange sie als solche gekennzeichnet ist.
